@@ -1,0 +1,42 @@
+/*--------------------------------------------------------------
+# Start Main Heading
+--------------------------------------------------------------*/
+
+.heading_line {
+    margin-bottom: 20px;
+    h4 {
+        font-size: 26px;
+        color: #343434;
+        text-transform: capitalize;
+        font-family: "neoMed";
+        margin-bottom: 0;
+    }
+    hr {
+        background-color: #bdbbbb;
+        height: 1px;
+        border: none;
+        &.hr-width {
+            animation: hr-width 2s linear;
+        }
+    }
+}
+
+.heading_2 {
+    color: #484848;
+    font-size: 32px;
+    font-family: "neoMed";
+}
+
+@keyframes hr-width {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# End Main Heading
+--------------------------------------------------------------*/

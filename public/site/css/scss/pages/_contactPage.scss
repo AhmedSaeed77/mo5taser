@@ -1,0 +1,72 @@
+/*--------------------------------------------------------------
+# Start contact page
+--------------------------------------------------------------*/
+
+.contact_page {
+    padding: 80px 0;
+    background-color: #F8F8F8;
+    .form_modal {
+        box-shadow: 0px 8px 23px rgb(0 0 0 / 5%);
+        border-radius: 8px;
+        padding: 27px 45px 40px;
+        background-color: #fff;
+        .border_e {
+            border-inline-end: 1px solid #D0D0D0;
+            padding-inline-end: 50px;
+        }
+        .form-group {
+            margin-bottom: 18px;
+        }
+        .head {
+            color: #343434;
+            font-size: 22px;
+            font-family: "neoMed";
+            margin-bottom: 26px;
+        }
+        label {
+            color: #484848;
+            margin-bottom: 8px;
+            font-family: "neoRegular";
+        }
+        .input_form {
+            border: 1px solid #D0D0D0;
+            background-color: transparent;
+        }
+        .main-btn {
+            min-width: 160px;
+        }
+    }
+    .contact_info {
+        padding-inline-start: 40px;
+        .head {
+            margin-bottom: 40px;
+        }
+        .item {
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 0 10px;
+            color: #484848;
+            font-family: "neoMed";
+            &:hover {
+                color: $mainColor;
+            }
+            .icon {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid #D0D0D0;
+                color: #7518DD;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+
+/*--------------------------------------------------------------
+# End contact page
+--------------------------------------------------------------*/

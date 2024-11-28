@@ -1,0 +1,349 @@
+/*--------------------------------------------------------------
+# Start login page
+--------------------------------------------------------------*/
+
+.login_page {
+    background-color: #F8F8F8;
+    padding: 130px 0;
+    min-height: 100vh;
+    .form_modal {
+        background-color: #fff;
+        width: 90%;
+        margin: 0 auto;
+        box-shadow: 0px 8px 23px rgba($color: #000000, $alpha: 0.05);
+        border-radius: 8px;
+        overflow: hidden;
+        .form-group {
+            margin-bottom: 14px;
+            label {
+                font-size: 16px;
+                font-family: "neoRegular";
+                color: #484848;
+                margin-bottom: 8px;
+            }
+        }
+        .form_box {
+            padding: 20px 30px 35px;
+            .head {
+                font-size: 22px;
+                color: #343434;
+                font-family: "neoMed";
+            }
+            .forget_pass {
+                text-align: end;
+                margin-top: -6px;
+                margin-bottom: 24px;
+                a {
+                    color: $mainColor;
+                    font-family: "neoRegular";
+                    &:hover {
+                        color: $secColor;
+                    }
+                }
+            }
+            .main-btn {
+                width: 100%;
+                border: 0;
+                margin-bottom: 24px;
+            }
+            .no_account {
+                color: #484848;
+                font-family: "neoRegular";
+                gap: 0 5px;
+                a {
+                    color: $mainColor;
+                    font-family: "neoRegular";
+                    &:hover {
+                        color: $secColor;
+                    }
+                }
+            }
+        }
+        .image {
+            position: relative;
+            &:after {
+                position: absolute;
+                content: "";
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba($color: #000000, $alpha: 0.45);
+                border-radius: 5px;
+            }
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+.input_form {
+    background-color: #F6F6F6;
+    border: 1px solid #EAEAEA;
+    height: 38px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    .form-control {
+        background-color: transparent;
+        border: 0;
+        height: 100%;
+        box-shadow: none;
+        padding: 8px;
+        &::placeholder {
+            color: #A0A0A0;
+        }
+    }
+    .icon {
+        color: #A0A0A0;
+        font-size: 18px;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# End login page
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Start register page
+--------------------------------------------------------------*/
+
+.register_page {
+    padding: 40px 0 80px;
+    .head_page {
+        font-size: 32px;
+        font-family: "neoBold";
+    }
+    .form_modal {
+        width: 100%;
+        padding: 30px;
+    }
+    .form-wizard {
+        padding-inline-start: 17px;
+        padding-inline-end: 47px;
+        .form-wizard-header {
+            text-align: center;
+            margin-bottom: 39px;
+        }
+        .main-btn {
+            font-family: "neoMed";
+            &.main,
+            &.sec {
+                width: 180px;
+            }
+            &.back {
+                background-color: #F5F5F5;
+                color: #6D6D6D;
+                gap: 0 7px;
+                padding: 8px 30px;
+                &:hover {
+                    background-color: $mainColor;
+                    color: #fff;
+                }
+                i {
+                    font-size: 18px;
+                    margin-top: 7px;
+                }
+            }
+        }
+    }
+    .content_fieldset {
+        .form-group {
+            margin-bottom: 18px;
+        }
+        .head {
+            font-size: 22px;
+            color: #343434;
+            font-family: "neoMed";
+        }
+        .block {
+            padding-bottom: 25px;
+            border-bottom: 1px solid #E4E4E4;
+            margin-bottom: 28px;
+        }
+        .radio_div {
+            gap: 0 30px;
+            .custom_checkbox p {
+                margin-inline-start: 12px;
+                color: #484848;
+                font-size: 18px;
+            }
+        }
+        .radio_div_2 {
+            .custom_checkbox p {
+                margin-inline-start: 10px;
+                color: #484848;
+                font-size: 16px;
+            }
+        }
+        .all_tabs {
+            >div {
+                display: none;
+            }
+            #student_1 {
+                display: block;
+            }
+        }
+        .block_content {
+            select.form-control {
+                padding: 0 !important;
+            }
+            .head_radio {
+                color: #484848;
+                font-size: 18px;
+                font-family: "neoRegular";
+                margin-bottom: 12px;
+            }
+        }
+        .agree_text {
+            color: #4B4B4B;
+            font-family: "neoRegular";
+            a {
+                font-family: "neoRegular";
+                color: $mainColor;
+                &:hover {
+                    color: $secColor;
+                }
+            }
+        }
+    }
+}
+
+
+/*--------------------------------------------------------------
+# End register page
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# start wizard form
+--------------------------------------------------------------*/
+
+.form-wizard .wizard-fieldset {
+    display: none;
+}
+
+.form-wizard .wizard-fieldset.show {
+    display: block;
+}
+
+.form-wizard .wizard-form-error {
+    display: none;
+    background-color: rgb(230, 43, 43);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+}
+
+.form-wizard .form-group {
+    position: relative;
+}
+
+.form-wizard {
+    .messag-error {
+        display: none;
+        text-align: end;
+        color: #f44336;
+        white-space: nowrap;
+    }
+    #progressbar {
+        display: flex;
+        li {
+            list-style-type: none;
+            font-size: 12px;
+            width: 33.333%;
+            position: relative;
+            z-index: 1;
+            color: #363636;
+            &:after {
+                content: "";
+                width: 100%;
+                height: 4px;
+                background: #E4E4E4;
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: -1;
+            }
+            &.active,
+            &.activated {
+                &:after,
+                &:before {
+                    background: $mainColor;
+                }
+            }
+        }
+    }
+}
+
+
+/*--------------------------------------------------------------
+# End wizard form
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# start verification page
+--------------------------------------------------------------*/
+
+.verification_page {
+    padding: 47px 0 80px;
+    .box {
+        box-shadow: 0px 8px 23px rgba($color: #000000, $alpha: 0.05);
+        width: 50%;
+        margin: 0 auto;
+        border-radius: 5px;
+        padding: 31px 20px 47px;
+        font-family: "neoRegular";
+        .head {
+            font-family: "neoMed";
+        }
+    }
+    .veri_inputs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        direction: ltr;
+        gap: 0 13px;
+        margin: 20px 0;
+    }
+    .verify-input-field {
+        height: 45px;
+        width: 50px;
+        text-align: center;
+        font-size: 25px;
+        outline: none;
+        border: 1px solid #B7B7B7;
+        border-radius: 8px;
+        color: rgba(0, 0, 0, 0.8);
+        caret-color: rgba(0, 0, 0, 0.3);
+        transition: all 0.1s ease-out;
+        box-shadow: 0px 3px 7px rgb(0 0 0 / 11%);
+    }
+    .verify-input-field:focus {
+        transform: scale(1.2);
+    }
+    .details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px 0;
+        .main-btn {
+            min-width: 150px;
+        }
+    }
+}
+
+
+/*--------------------------------------------------------------
+# End verification page
+--------------------------------------------------------------*/

@@ -1,0 +1,828 @@
+/*--------------------------------------------------------------
+# Start single course page
+--------------------------------------------------------------*/
+
+.book_pdf {
+    padding: 30px;
+    iframe {
+        height: 300px;
+        @media(min-width: 768px) {
+            height: 500px;
+        }
+    }
+}
+
+.single_course_page {
+    padding: 46px 0 70px;
+    .course_name {
+        font-size: 24px;
+        color: #484848;
+        font-family: "neoMed";
+        margin-bottom: 23px;
+    }
+    .course_content {
+        .course_video {
+            position: relative;
+            img {
+                border-radius: 6px;
+                width: 100%;
+                height: 400px;
+                object-fit: cover;
+            }
+            .play-btn {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+    .about_course {
+        margin-top: 16px;
+        .list_control {
+            margin-bottom: 23px;
+            background-color: #FAFAFA;
+            border-radius: 6px;
+            overflow: hidden;
+            ul {
+                display: flex;
+                li {
+                    padding: 18px 10px;
+                    color: #484848;
+                    flex: 1;
+                    text-align: center;
+                    cursor: pointer;
+                    &.active {
+                        background-color: $mainColor;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        .box_content {
+            background-color: #FAFAFA;
+            border-radius: 6px;
+            display: none;
+            opacity: 0;
+            transition: .3s;
+            @include start_FadeInUp;
+            &.active {
+                display: block;
+                @include animation_FadeInUp;
+            }
+        }
+        #course_desceription {
+            padding: 30px 22px 40px;
+            color: #484848;
+            .block {
+                margin-top: 28px;
+                h5 {
+                    margin-bottom: 18px;
+                    font-size: 22px;
+                    font-family: "neoMed";
+                }
+                ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 15px 0;
+                    li {
+                        max-width: 50%;
+                        flex: 50%;
+                        display: flex;
+                        align-items: center;
+                        gap: 0 6px;
+                        i {
+                            color: $mainColor;
+                        }
+                    }
+                }
+            }
+        }
+        #course_content {
+            padding: 28px 25px 1px;
+            .course_block {
+                margin-bottom: 17px;
+                .head {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    border-bottom: 1px solid #D0D0D0;
+                    padding-bottom: 17px;
+                    cursor: pointer;
+                    h6 {
+                        margin: 0;
+                        color: #343434;
+                        font-size: 18px;
+                        font-family: "neoMed";
+                    }
+                }
+                .content {
+                    margin-top: 7px;
+                    margin-bottom: 27px;
+                    display: none;
+                    &.active {
+                        display: block;
+                    }
+                    .item {
+                        padding: 10px 0;
+                        display: flex;
+                        align-items: center;
+                        gap: 0 10px;
+                        color: #6D6D6D;
+                        border-bottom: 1px solid #EEEEEE;
+                        i {
+                            color: $mainColor;
+                            font-size: 24px;
+                        }
+                        &:hover {
+                            color: $mainColor;
+                        }
+                    }
+                }
+            }
+        }
+        #course_questions {
+            padding: 30px 23px 8px;
+            .course_block {
+                margin-bottom: 21px;
+                .head {
+                    display: flex;
+                    align-items: center;
+                    gap: 0 6px;
+                    border-bottom: 1px solid #CCCCCC;
+                    padding-bottom: 19px;
+                    color: $mainColor;
+                    cursor: pointer;
+                    h6 {
+                        margin: 0;
+                        font-size: 18px;
+                    }
+                    i {
+                        font-size: 26px;
+                    }
+                }
+                .content {
+                    padding-top: 20px;
+                    color: #484848;
+                    border-bottom: 1px solid #D0D0D0;
+                    padding-bottom: 15px;
+                    display: none;
+                    p {
+                        margin: 0;
+                    }
+                }
+                &.active {
+                    .content {
+                        display: block;
+                    }
+                }
+            }
+        }
+        #course_rating {
+            padding: 37px 0 20px;
+            .head_rate {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-bottom: 1px solid #E2E2E2;
+                padding: 0 25px 27px;
+                .text {
+                    gap: 0 19px;
+                }
+                h6 {
+                    color: #484848;
+                    font-size: 18px;
+                    font-family: "neoMed";
+                    margin: 0;
+                }
+                .more {
+                    display: flex;
+                    align-items: center;
+                    gap: 0 15px;
+                    color: #484848;
+                    font-size: 18px;
+                    .stars {
+                        color: #F99B20;
+                    }
+                }
+            }
+            .box_rate {
+                padding: 14px 27px;
+                display: flex;
+                align-items: center;
+                gap: 0 15px;
+                &:not(:last-of-type) {
+                    border-bottom: 1px solid #EFEFEF;
+                }
+                .icon {
+                    width: 32px;
+                    min-width: 32px;
+                    height: 32px;
+                    background-color: #29b4e3;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    color: #fff;
+                }
+                .box {
+                    position: relative;
+                    padding: 11px 18px 17px;
+                    background-color: #fff;
+                    border-radius: 5px;
+                    box-shadow: 0px 3px 6px rgba($color: #000000, $alpha: 0.06);
+                    max-width: 260px;
+                    &:after {
+                        position: absolute;
+                        content: "";
+                        top: 50%;
+                        right: -9px;
+                        border-top: 18px solid transparent;
+                        border-bottom: 18px solid transparent;
+                        border-left: 11px solid #fff;
+                        transform: translateY(-50%);
+                    }
+                    .name {
+                        color: $mainColor;
+                        margin-bottom: 8px;
+                    }
+                    .stars {
+                        color: #F99B20;
+                        font-size: 14px;
+                    }
+                    .comment {
+                        margin: 7px 0 0;
+                        color: #484848;
+                    }
+                }
+            }
+        }
+        #students_result {
+            padding: 30px 22px;
+            .item_carousel {
+                padding: 15px;
+                .box {
+                    box-shadow: 0px 3px 10px rgb(0 0 0 / 10%);
+                    border-radius: 5px;
+                    overflow: hidden;
+                    background-color: #fff;
+                    padding: 10px;
+                    img {
+                        height: 155px;
+                        object-fit: contain;
+                    }
+                }
+                .name {
+                    padding: 10px 10px 6px;
+                    margin: 0;
+                    text-align: center;
+                    border-top: 1px solid #ddd;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+    .course_side_list {
+        background-color: #FAFAFA;
+        border-radius: 6px;
+        overflow: hidden;
+        .list {
+            padding-top: 8px;
+            li {
+                padding: 19px 15px;
+                display: flex;
+                align-items: center;
+                gap: 0 10px;
+                border-bottom: 1px solid #EAEAEA;
+                font-size: 15px;
+                &.user {
+                    border-bottom: 0;
+                    img {
+                        width: 36px;
+                        height: 36px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+        .add-cart-h {
+            padding: 10px 15px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            .btn-cart {
+                background-color: $secColor;
+                color: #fff;
+                &:hover {
+                    background-color: $darkColor;
+                }
+            }
+            .price-h {
+                margin: 0;
+                font-size: 16px;
+                color: $secColor;
+                .num {
+                    font-size: 18px;
+                    font-family: "neoMed";
+                }
+            }
+        }
+    }
+}
+
+
+/*--------------------------------------------------------------
+# End single course page
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Start single course join page
+--------------------------------------------------------------*/
+
+.single_course_join_page {
+    display: flex;
+    .profile_list_side {
+        width: 205px;
+        min-width: 205px;
+        background-color: $mainColor;
+        height: auto;
+        min-height: 100vh;
+        .apps_wrapper {
+            margin-top: 50px;
+            text-align: center;
+            color: #fff;
+            .text {
+                margin-bottom: 14px;
+                font-family: "neoRegular";
+            }
+            a {
+                display: block;
+                margin-bottom: 10px;
+            }
+            img {
+                width: 150px;
+            }
+        }
+        .person_name {
+            padding: 30px 17px 14px;
+            gap: 0 9px;
+            .icon {
+                width: 42px;
+                height: 42px;
+                background-color: #fff;
+                border-radius: 50%;
+                font-size: 17px;
+                color: #A0A0A0;
+            }
+        }
+        .list_control {
+            li {
+                padding: 13px 25px;
+                color: #fff;
+                display: flex;
+                align-items: center;
+                gap: 0 10px;
+                font-family: "neoRegular";
+                cursor: pointer;
+                transition: 0.3s;
+                border-bottom: 1px solid rgba($color: #E4E4E4, $alpha: 0.38);
+                &:hover,
+                &.active {
+                    background-color: #fff;
+                    color: $mainColor;
+                }
+                i {
+                    font-size: 18px;
+                }
+            }
+            .link {
+                padding: 13px 25px;
+                color: #fff;
+                display: flex;
+                align-items: center;
+                gap: 0 10px;
+                font-family: "neoRegular";
+                transition: 0.3s;
+                &:hover {
+                    background-color: #fff;
+                    color: $mainColor;
+                }
+            }
+        }
+    }
+    .main_content {
+        padding: 17px 20px;
+        flex: 1;
+        .head_page {
+            font-size: 22px;
+            gap: 0 8px;
+            i {
+                font-size: 21px;
+            }
+        }
+        .box_content {
+            display: none;
+            opacity: 0;
+            transition: .3s;
+            @include start_FadeInUp;
+            &.active {
+                display: block;
+                @include animation_FadeInUp;
+            }
+        }
+    }
+    #course_section {
+        .single_lesson_content {
+            border-bottom: 1px solid #fff;
+            &:nth-of-type(1) {
+                .lessons_content {
+                    display: block;
+                }
+            }
+        }
+        .lessons_card {
+            background-color: #F3F3F3;
+            .head {
+                padding: 13px 17px;
+                background-color: $mainColor;
+                color: #fff;
+                font-size: 18px;
+                justify-content: space-between;
+                cursor: pointer;
+                >div {
+                    gap: 0 8px;
+                }
+                .arrow i {
+                    transition: 0.3s;
+                    &.rotate {
+                        transform: rotate(0.5turn);
+                    }
+                }
+            }
+            .lessons_content {
+                display: none;
+                max-height: 331px;
+                overflow: auto;
+                .single_lesson {
+                    padding: 16px 18px;
+                    gap: 0 9px;
+                    padding-inline-end: 7px;
+                    &:not(:last-of-type) {
+                        border-bottom: 1px solid #D0D0D0;
+                    }
+                    .icon_shape {
+                        width: 26px;
+                        min-width: 26px;
+                        height: 26px;
+                        border-radius: 50%;
+                        background-color: #fff;
+                        color: $mainColor;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    .info {
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 0 10px;
+                        align-items: center;
+                        flex: 1;
+                        p {
+                            -webkit-line-clamp: 2;
+                            font-family: "neoLight";
+                            transition: 0.3s;
+                        }
+                    }
+                    &:hover {
+                        .info p {
+                            color: $mainColor;
+                        }
+                    }
+                }
+            }
+        }
+        .main_content_wrapper {
+            .video_show {
+                position: relative;
+                height: 420px;
+                margin-bottom: 23px;
+                iframe {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                }
+            }
+            .box_design {
+                text-align: center;
+                background: #F5F5F5;
+                padding: 55px;
+                border-radius: 5px;
+                margin-bottom: 23px;
+                p {
+                    font-size: 18px;
+                }
+                .time {
+                    background-color: #fff;
+                    padding: 10px 40px;
+                    border-radius: 8px;
+                    color: $mainColor;
+                    font-size: 18px;
+                    font-family: "neoMed";
+                    display: inline-block;
+                    margin-bottom: 25px;
+                    border: 1px solid #E4E4E4;
+                }
+                .btn-form {
+                    padding: 10px 30px;
+                    display: inline-block;
+                }
+            }
+            .zoom_show {
+                p {
+                    margin: 25px 0;
+                }
+            }
+            .homework_show {
+                h6 {
+                    color: $mainColor;
+                    font-family: "neoMed";
+                }
+                p {
+                    margin: 10px 0 25px;
+                }
+                .time span {
+                    color: #484848;
+                    font-family: "neoRegular";
+                }
+            }
+            .controls {
+                .main-btn {
+                    border-color: #E4E4E4;
+                    font-family: "neoRegular";
+                    gap: 0 10px;
+                    padding: 8px 30px;
+                }
+            }
+        }
+    }
+    #decisions_section {
+        .single_decision {
+            margin-bottom: 8px;
+            .head {
+                background-color: #F3F3F3;
+                padding: 16px 30px;
+                color: #343434;
+                font-family: "neoMed";
+                cursor: pointer;
+                font-size: 18px;
+                h6 {
+                    font-size: 18px;
+                }
+            }
+            .decision_content {
+                display: none;
+                &.block {
+                    display: block;
+                }
+                .item {
+                    padding: 16px;
+                    &:not(:last-of-type) {
+                        border-bottom: 1px solid #D0D0D0;
+                    }
+                    .details_box {
+                        max-width: 50%;
+                        flex: 50%;
+                        gap: 0 18px;
+                        .image {
+                            position: relative;
+                            width: 83px;
+                            min-width: 83px;
+                            height: 60px;
+                            border-radius: 5px;
+                            border: 1px solid #E4E4E4;
+                            overflow: hidden;
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                            .icon {
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                width: 26px;
+                                height: 26px;
+                                border-radius: 50%;
+                                background-color: #fff;
+                                color: $mainColor;
+                            }
+                        }
+                    }
+                    .meta {
+                        gap: 0 26px;
+                        font-family: "neoLight";
+                    }
+                    .status {
+                        color: #6D6D6D;
+                        &.finished {
+                            color: #24B400;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #table_section {
+        height: 100%;
+        .table_content {
+            padding-bottom: 40px;
+            .image {
+                position: relative;
+                height: 300px;
+                width: 470px;
+                max-width: 100%;
+                border-radius: 8px;
+                overflow: hidden;
+                img {
+                    object-fit: cover;
+                    height: 100%;
+                    width: 100%;
+                }
+                .main-btn {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background-color: #fff;
+                    color: $mainColor;
+                    padding: 10px 45px;
+                    box-shadow: 0px 3px 6px rgba($color: #000000, $alpha: 0.16);
+                    white-space: nowrap;
+                    &:hover {
+                        background-color: $mainColor;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    #reports_section {
+        .reports_content {
+            background-color: #F3F3F3;
+            border-radius: 10px;
+            padding: 40px 25px 20px;
+            .box {
+                text-align: center;
+                border: 1px solid #29b4e3;
+                padding: 15px;
+                border-radius: 10px;
+                background-color: #fff;
+                margin-bottom: 20px;
+                h6 {
+                    margin: 10px 0;
+                }
+            }
+        }
+    }
+}
+
+
+/*--------------------------------------------------------------
+# End single course join page
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Start review modal
+--------------------------------------------------------------*/
+
+.review_modal {
+    .modal-content {
+        padding: 37px 0;
+        text-align: center;
+        .modal-head {
+            margin-bottom: 35px;
+            h5 {
+                margin: 0;
+                font-size: 22px;
+                color: $mainColor;
+                font-weight: 600;
+            }
+        }
+        .text_rate {
+            color: #525252;
+        }
+        .modal-body {
+            padding: 0;
+            width: 80%;
+            margin: 0 auto;
+            .comment_box {
+                label {
+                    margin: 0 0 10px;
+                    font-size: 18px;
+                    font-family: "neoMed";
+                }
+                textarea {
+                    height: 120px;
+                    border: 1px solid #D0D0D0;
+                    border-radius: 5px;
+                    resize: none;
+                    box-shadow: none;
+                }
+            }
+            .main-btn {
+                border-radius: 3px;
+                font-weight: normal;
+                padding: 10px 50px;
+                text-transform: capitalize;
+            }
+        }
+    }
+    .rate {
+        margin-bottom: 45px;
+        .rating-list {
+            display: flex;
+            direction: rtl;
+            justify-content: center;
+            input[type=radio].rating-radio {
+                position: absolute;
+                margin: 1em 0 0 0.9em;
+                font-size: 0.5em;
+                z-index: -1;
+                visibility: hidden;
+            }
+            .star-rating {
+                display: block;
+                height: 35px;
+                color: transparent;
+                background: #ddd;
+                position: relative;
+                width: 35px;
+                clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+                margin: 0 10px;
+                &:before {
+                    z-index: 10;
+                    position: absolute;
+                    width: 0;
+                    height: 100%;
+                    content: "";
+                    background: #EEB823;
+                    top: 0;
+                    left: 0;
+                }
+            }
+            .star-rating:hover:before {
+                width: 100%;
+            }
+            .star-rating:hover:before,
+            .star-rating:hover~.star-rating:before {
+                width: 100%;
+            }
+            .rating-radio--1:checked~.star-rating:before {
+                width: 100%;
+            }
+            .rating-radio--2:checked~.star-rating:before {
+                width: 100%;
+            }
+            .rating-radio--3:checked~.star-rating:before {
+                width: 100%;
+            }
+            .rating-radio--4:checked~.star-rating:before {
+                width: 100%;
+            }
+            .rating-radio--5:checked~.star-rating:before {
+                width: 100%;
+            }
+            .rating-radio--6:checked~.star-rating:before {
+                width: 100%;
+            }
+            .rating-radio--7:checked~.star-rating:before {
+                width: 100%;
+            }
+            .rating-radio--8:checked~.star-rating:before {
+                width: 100%;
+            }
+            .rating-radio--9:checked~.star-rating:before {
+                width: 100%;
+            }
+            .rating-radio--10:checked~.star-rating:before {
+                width: 100%;
+            }
+            .rating-list .star-rating:hover:before,
+            .rating-list .star-rating:hover~.star-rating:before {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+/*--------------------------------------------------------------
+# End review modal
+--------------------------------------------------------------*/

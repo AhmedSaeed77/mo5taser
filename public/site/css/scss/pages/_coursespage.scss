@@ -1,0 +1,30 @@
+/*--------------------------------------------------------------
+# Start Courses page
+--------------------------------------------------------------*/
+
+.courses_page {
+    padding: 30px 0 70px;
+    .title.title-sec {
+        margin: 0;
+        font-size: 26px;
+    }
+    .heading_courses {
+        margin-bottom: 55px;
+        background-color: #F5F5F5;
+        border-radius: 5px;
+        padding: 12px 20px;
+        align-items: center;
+    }
+    .cour-block {
+        box-shadow: none;
+        transition: 0.3s;
+        &:hover {
+            box-shadow: 0px 8px 20px rgba($color: #000000, $alpha: 0.16);
+        }
+    }
+}
+
+
+/*--------------------------------------------------------------
+# End Courses page
+--------------------------------------------------------------*/

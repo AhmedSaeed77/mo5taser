@@ -1,0 +1,48 @@
+/*==================== style of dashboard 5 here =======================*/
+
+.dashboard_5 {
+    padding: 20px 30px;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    padding: 20px 5px 15px 5px;
+}
+
+.dashboard_5 .content .drop-down-container {
+    text-align: center;
+    background: white;
+    margin-bottom: 20px;
+}
+
+.dashboard_5 .content .drop-down-container a {
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: end;
+    display: block;
+}
+
+.dashboard_5 .content .drop-down-container a i {
+    float: right;
+    transform: translateY(5px);
+}
+
+.dashboard_5 .content .collapse ul {
+    list-style: none;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    direction: ltr;
+}
+
+.dashboard_5 .content .collapse ul li {
+    border-bottom: 1px solid #bbbbbb;
+    padding-top: 17px;
+}
+
+.dashboard_5 .content .collapse ul li:last-child {
+    border-bottom: none;
+}
+
+.hidden {
+    display: none;
+}

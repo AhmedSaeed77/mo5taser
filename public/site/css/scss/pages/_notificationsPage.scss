@@ -1,0 +1,73 @@
+/*--------------------------------------------------------------
+# Start notifications page
+--------------------------------------------------------------*/
+
+.notifications_page {
+    padding: 50px 0;
+    .head {
+        justify-content: space-between;
+        margin-bottom: 25px;
+        h4 {
+            font-size: 32px;
+            font-family: "bahijBold";
+        }
+        .delete_all {
+            border: 1px solid #C4C4C4;
+            background: none;
+            padding: 10px 20px;
+            color: #6D6D6D;
+            border-radius: 5px;
+            gap: 0 7px;
+            i {
+                font-size: 22px;
+            }
+            &:hover {
+                background-color: #FF5E49;
+                border-color: #FF5E49;
+                color: #fff;
+            }
+        }
+    }
+    .content_noti {
+        border: 1px solid #D0D0D0;
+        border-radius: 5px;
+        .item {
+            padding: 25px 30px;
+            gap: 0 10px;
+            &:not(:last-of-type) {
+                border-bottom: 1px solid #E8E8E8;
+            }
+            img {
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+.custom_modal {
+    .modal_header {
+        text-align: center;
+        padding: 15px;
+        border-bottom: 1px solid #ccc;
+        h5 {
+            margin: 0;
+            font-size: 24px;
+        }
+    }
+    textarea {
+        height: 100px;
+        resize: none;
+        box-shadow: none;
+    }
+    .modal-footer {
+        justify-content: center;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# End notifications page
+--------------------------------------------------------------*/

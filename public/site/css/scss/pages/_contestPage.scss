@@ -1,0 +1,62 @@
+/*--------------------------------------------------------------
+# Start contest
+--------------------------------------------------------------*/
+
+.contest_page {
+    padding: 50px 0 80px;
+    .contest_box {
+        border: 1px solid #E4E4E4;
+        border-radius: 7px;
+        width: 70%;
+        margin: 0 auto;
+        padding: 35px;
+        .headPage {
+            display: inline-block;
+            border-bottom: 1px solid #E4E4E4;
+            padding: 0 20px 17px;
+            font-family: "neoRegular";
+            p {
+                margin-top: 5px;
+                font-family: "neoMed";
+                font-size: 22px;
+            }
+        }
+        .desc {
+            padding: 0 60px;
+            font-family: "neoLight";
+        }
+        .rules {
+            .head {
+                font-family: "neoMed";
+            }
+            ul {
+                padding-inline-start: 20px;
+                margin-bottom: 40px;
+                li {
+                    position: relative;
+                    font-family: "neoLight";
+                    margin-bottom: 12px;
+                    &:before {
+                        position: absolute;
+                        content: "";
+                        right: -20px;
+                        top: 50%;
+                        transform: translateY(calc(-50% + 2px));
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 50%;
+                        background-color: $mainColor;
+                    }
+                }
+            }
+        }
+        .main-btn {
+            padding: 8px 40px;
+        }
+    }
+}
+
+
+/*--------------------------------------------------------------
+# End contest
+--------------------------------------------------------------*/

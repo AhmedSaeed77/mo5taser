@@ -1,0 +1,695 @@
+/*--------------------------------------------------------------
+# Start responsive
+--------------------------------------------------------------*/
+
+@media(max-width:1199.98px) {}
+
+@media (max-width: 991.98px) {
+    .header-in .nav-inner .menu-left ul li a span {
+        display: none;
+    }
+    .header-in .nav-inner .menu-left ul li a.req-h,
+    .req-h {
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        padding: 8px 0;
+    }
+    .header-in .nav-inner .menu-left ul li {
+        padding: 0 8px;
+    }
+    .header-in .nav-inner .menu-left ul li::after {
+        left: 1px;
+    }
+    .banner-home,
+    .banner-home .home-slider,
+    .block-home-slider {
+        height: 500px;
+    }
+    .search-h {
+        max-width: 540px;
+    }
+    .social-fixed {
+        top: auto;
+        margin: 20px;
+        gap: 10px;
+    }
+    .search-h h1 {
+        font-size: 22px;
+    }
+    .search-h form {
+        margin: 20px 0 0;
+        flex-wrap: wrap;
+    }
+    .search-h form .form-group {
+        height: 40px;
+        max-width: 50%;
+        flex: 0 0 50%;
+    }
+    .search-h form .form-group .nice-select {
+        width: 100%;
+    }
+    .search-h form .form-group:last-child {
+        max-width: 100%;
+        flex: auto;
+        margin: 20px 0 0;
+        text-align: center;
+    }
+    .search-h form .form-group .nice-select,
+    .search-h form .form-group input {
+        height: 40px;
+        line-height: 40px;
+    }
+    .search-h form .form-group .btn-form {
+        width: 100%;
+    }
+    .search-h form .form-group i {
+        top: 12px;
+    }
+    .why-h {
+        padding: 50px 0 0;
+    }
+    .title,
+    .title.title-sec,
+    .news-h .title {
+        margin: 0 0 25px;
+    }
+    .title h3 {
+        font-size: 22px;
+    }
+    .title p {
+        margin: 5px 0 0;
+        font-size: 15px;
+    }
+    .why-h .col-md-3.col-sm-6 {
+        max-width: 50%;
+    }
+    .courses-h {
+        padding: 100px 0;
+    }
+    .courses-h .title.title-sec {
+        text-align: center;
+    }
+    .nav.nav-pills {
+        justify-content: center;
+        gap: 25px;
+        margin: 0 0 30px;
+    }
+    .nav-pills .nav-link {
+        padding: 10px 0;
+    }
+    .teacher-h {
+        padding: 50px 0;
+    }
+    .img-teacher {
+        max-width: 350px;
+        margin: 59px 0 0;
+    }
+    .news-h {
+        padding: 50px 0;
+    }
+    .say-h {
+        padding: 100px 0;
+    }
+    .img-say {
+        max-width: 350px;
+        margin: 60px auto 0;
+    }
+    .apps-h {
+        padding: 50px 0;
+    }
+    .img-app {
+        max-width: 500px;
+        margin: 30px auto 0;
+        height: 433px;
+    }
+    .img-app .img {
+        width: 126px;
+    }
+    .footer-col h3 {
+        margin: 20px 0;
+    }
+    .social-fixed a {
+        opacity: .9;
+    }
+    .social-fixed a:hover {
+        opacity: 1;
+    }
+    .single_course_page .course_side_list {
+        margin-top: 25px;
+    }
+    .about_page .info {
+        margin-bottom: 30px;
+    }
+    .profile_page .content_section {
+        gap: 0 20px;
+    }
+    .single_exam_page {
+        .o-2 {
+            order: 2;
+            margin-top: 25px;
+        }
+    }
+    .details_of_exam_page .content_section .result_box .details .box {
+        height: auto;
+        margin-bottom: 15px;
+    }
+    .details_of_exam_page .content_section {
+        width: 100%;
+    }
+    .result_of_exam_page .content_section {
+        width: 100%;
+    }
+    .login_page {
+        .o-2 {
+            order: 2;
+        }
+        .form_modal .image {
+            height: auto !important;
+        }
+    }
+    .register_page .form-wizard {
+        padding: 0;
+        margin-top: 25px;
+    }
+    .contact_page .form_modal .border_e {
+        border-inline-end: 0;
+        padding-inline-end: 15px;
+        order: 2;
+        margin-top: 20px;
+    }
+    .contact_page .contact_info {
+        padding-inline-start: 15px;
+    }
+    .single_news_page .other_news {
+        margin-top: 40px;
+    }
+    .contest_page .contest_box {
+        width: 100%;
+    }
+    .say-h .contest_main {
+        margin-top: 70px;
+    }
+    .cart_page .cart_cardSide {
+        margin-top: 30px;
+    }
+    .myProfile_page .profile_flex {
+        flex-direction: column;
+        gap: 30px 0;
+    }
+    .myProfile_page .profileCard,
+    .myProfile_page .main_content {
+        width: 100%;
+    }
+    .myProfile_page .main_content .box_content {
+        padding-inline-start: 0;
+    }
+    .single_course_join_page #course_section .lessons_card {
+        height: auto;
+        margin-bottom: 30px;
+    }
+    .single_course_join_page #decisions_section .single_decision .decision_content .item .details_box {
+        max-width: 70%;
+        flex: 70%;
+    }
+    .mt-md-30 {
+        margin-top: 30px;
+    }
+    .my_certificates_page .certificates_content .box_content {
+        padding: 50px 30px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .owl-carousel .owl-nav {
+        display: none;
+    }
+    .header-in .logo {
+        width: 200px;
+        height: auto;
+    }
+    .second_nav .settings .lang {
+        margin-inline-start: 0;
+        padding-inline-start: 0;
+        border-inline-start: 0;
+        position: relative;
+        width: 36px;
+        min-width: 36px;
+        height: 36px;
+        background-color: #fff;
+        color: $mainColor;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+            background-color: $secColor;
+            color: #fff;
+        }
+        span {
+            display: none;
+        }
+    }
+    .courses_page {
+        padding-bottom: 40px;
+        .title.title-sec {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .nav.nav-pills {
+            gap: 0px 25px;
+            margin: 0;
+        }
+        .heading_courses {
+            margin-bottom: 30px;
+        }
+        .custom_pagination {
+            margin-top: 20px;
+        }
+    }
+    .second_nav .settings {
+        gap: 0 16px;
+        .login_box .dropdown_menu {
+            left: 0;
+            right: auto;
+        }
+    }
+    .details_of_exam_page .content_section .result_box .inside {
+        width: 100%;
+    }
+    .single_news_page .new_content .image img {
+        height: auto;
+    }
+    .verification_page .box {
+        width: 100%;
+    }
+    .myProfile_page #markiting_section .markiting_table .table_content .row_item .box {
+        max-width: 33.333%;
+        flex: 33.333%;
+    }
+    .myProfile_page #markiting_section .markiting_table .table_content .row_item .box .main-btn {
+        padding: 8px 20px;
+        opacity: 1;
+        visibility: visible;
+    }
+    .single_course_join_page {
+        flex-direction: column;
+        .profile_list_side {
+            width: calc(100% - 30px);
+            height: auto;
+            min-height: auto;
+            margin: 20px auto;
+        }
+    }
+    .my_certificates_page .certificates_content .certificate_box .certificate_design.design_two {
+        .shapes_cert img {
+            height: 150px !important;
+        }
+        .inner {
+            .head .text,
+            .head .logo {
+                max-width: 100% !important;
+                flex: 100% !important;
+            }
+            .content_cert {
+                padding: 0 20px !important;
+            }
+            .footer_cert {
+                margin: 0 45px 15px 15px !important;
+            }
+        }
+    }
+}
+
+@media(max-width:575.98px) {
+    .container {
+        max-width: 100%;
+    }
+    .why-h .col-md-3.col-sm-6 {
+        max-width: 100%;
+    }
+    .search-h form .form-group {
+        max-width: 100%;
+        flex: auto;
+        width: 100%;
+    }
+    .search-h form input {
+        border: none;
+        border-top: 1px solid #bebebe78;
+    }
+    .search-h form .form-group:last-child {
+        margin: 6px 0 0;
+    }
+    .search-h form .form-group .nice-select {
+        padding-inline-start: 0;
+    }
+    .search-h form .form-group i {
+        right: 0;
+    }
+    .search-h form .form-group input {
+        padding-inline-start: 25px;
+    }
+    .header-in .logo {
+        width: 150px;
+    }
+    .header-in .nav-inner .menu-left ul li a.req-h,
+    .req-h {
+        width: 35px;
+        height: 35px;
+        padding: 5px 0;
+    }
+    .footer-top {
+        text-align: center;
+        padding: 35px 0 10px;
+        .logo-f {
+            margin: 0 auto 15px;
+        }
+        .footer-col {
+            ul li a {
+                justify-content: center;
+                span {
+                    width: auto;
+                }
+            }
+            p {
+                margin: 0 auto;
+            }
+        }
+        .social-f {
+            justify-content: center;
+        }
+    }
+    .second_nav .settings {
+        gap: 0 6px;
+        .icons {
+            gap: 0 6px;
+        }
+        .lang,
+        .icon {
+            width: 28px;
+            min-width: 28px;
+            height: 28px;
+            font-size: 17px;
+            .active {
+                top: -2px;
+                right: 0px;
+                width: 9px;
+                height: 9px;
+            }
+        }
+    }
+    .second_nav .settings .login_box .dropdown_menu li a {
+        font-size: 14px;
+        padding: 8px;
+    }
+    .second_nav .settings .noti_box .dropdown_menu .text {
+        font-size: 13px;
+    }
+    .single_course_page .about_course .list_control ul {
+        flex-wrap: wrap;
+        li {
+            max-width: 50%;
+            flex: 50%;
+        }
+    }
+    .single_course_page .about_course #course_desceription .block ul li {
+        max-width: 100%;
+        flex: 100%;
+    }
+    .single_course_page .course_content .course_video img {
+        height: auto;
+    }
+    .single_course_page .about_course #course_content .course_block .head {
+        span {
+            font-size: 14px;
+        }
+        h6 {
+            font-size: 16px;
+        }
+    }
+    .single_course_page .about_course #course_questions .course_block .head h6 {
+        font-size: 16px;
+    }
+    .single_course_page .about_course #course_rating .head_rate {
+        gap: 15px;
+        flex-direction: column;
+    }
+    .notifications_page .content_noti .item {
+        gap: 10px;
+        flex-direction: column;
+        text-align: center;
+    }
+    .page_header {
+        height: 200px;
+        .page_name {
+            font-size: 35px;
+        }
+    }
+    .team_section {
+        padding: 50px 0;
+        .image img {
+            height: 310px;
+        }
+    }
+    .profile_page {
+        padding-bottom: 70px;
+        .content_section {
+            margin-top: 40px;
+            gap: 20px 0;
+            flex-direction: column;
+        }
+    }
+    .exams_page .exam_box .info .meta {
+        gap: 10px;
+        flex-direction: column;
+    }
+    .exams_page {
+        padding-bottom: 40px;
+        .content_section {
+            margin-top: 40px;
+        }
+    }
+    .single_exam_page .exam_box .content_box {
+        padding: 33px 12px;
+    }
+    .single_exam_page .exam_box .title_cat {
+        font-size: 19px;
+    }
+    .name_ques {
+        padding: 0;
+    }
+    .question_answers {
+        padding: 20px 10px 6px;
+    }
+    .connected_answers {
+        padding-inline-start: 3px;
+    }
+    .connected_questions {
+        padding-inline-end: 3px;
+    }
+    .details_of_exam_page .content_section {
+        padding: 25px 10px;
+    }
+    .details_of_exam_page .content_section .result_box {
+        padding: 26px 10px 34px;
+    }
+    .result_of_exam_page .content_section {
+        padding: 20px 10px 30px;
+    }
+    .name_ques .text {
+        font-size: 14px;
+    }
+    .second_nav.login_nav .settings .main-btn.white {
+        gap: 0 5px;
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+    .login_page {
+        padding: 50px 0;
+        .form_modal {
+            width: 100%;
+            .form_box {
+                padding: 30px 20px 20px;
+            }
+        }
+    }
+    .register_page .form_modal {
+        padding: 16px;
+    }
+    .register_page .form-wizard .main-btn.main,
+    .register_page .form-wizard .main-btn.sec {
+        width: auto;
+        padding: 8px 30px;
+        font-size: 14px;
+    }
+    .contact_page .form_modal {
+        padding: 30px 15px 30px;
+    }
+    .contact_page .form_modal .head {
+        font-size: 20px;
+    }
+    .contact_page {
+        padding: 50px 0;
+    }
+    .contest_page .contest_box .desc {
+        padding: 0;
+    }
+    .contest_page .contest_box {
+        padding: 35px 25px;
+    }
+    .contest_div .contest_box {
+        flex-wrap: wrap;
+    }
+    .contest_div .contest_box .image,
+    .contest_div .contest_box .info {
+        max-width: 100%;
+        flex: 100%;
+    }
+    .cart_page .my_products .cart_product {
+        >.flex-center-h {
+            flex-direction: column;
+        }
+        .info_broduct {
+            gap: 10px 0;
+            flex-direction: column;
+            align-items: center;
+            .meta {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+    }
+    .cart_page .my_products .cart_product .more_details {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        gap: 0 15px;
+        .price {
+            margin-bottom: 0;
+        }
+    }
+    .custom_modal .modal-content .modal-body p {
+        font-size: 20px;
+    }
+    .cart_page .cart_cardSide .copon_box .input input {
+        max-width: 180px;
+    }
+    .single_course_join_page #course_section .main_content_wrapper .video_show {
+        height: 300px;
+    }
+    .single_course_join_page .profile_list_side .person_name {
+        padding: 15px 17px;
+    }
+    .single_course_join_page #decisions_section .single_decision .decision_content .item {
+        flex-direction: column;
+        gap: 10px;
+        padding: 16px 0;
+        .details_box {
+            max-width: 100%;
+            flex: 100%;
+            flex-direction: column;
+            gap: 10px 0;
+            text-align: center;
+            .image {
+                width: auto;
+                min-width: auto;
+                height: 100px;
+            }
+        }
+        .meta {
+            justify-content: center;
+        }
+    }
+    .single_course_join_page #table_section .table_content .image {
+        height: auto;
+    }
+    .form-wizard {
+        .radio_div_2 {
+            flex-wrap: wrap;
+            justify-content: start;
+            gap: 20px;
+        }
+    }
+    .single_exam_page .box_done {
+        width: 100%;
+        p {
+            font-size: 25px;
+            margin: 14px;
+        }
+    }
+    .single_course_page .about_course #course_rating .head_rate .text {
+        gap: 10px 0;
+        flex-direction: column;
+    }
+    .cour-block .img-block .overlay .progression_level {
+        padding: 8px 10px;
+        gap: 0 4px;
+    }
+    .question_wrapper {
+        margin-bottom: 15px;
+    }
+    .question_wrapper>.name_ques {
+        padding: 13px;
+    }
+    .question_wrapper .answer_block {
+        padding: 20px 15px 25px;
+    }
+    .question_wrapper .result_box {
+        margin-top: 20px;
+    }
+    .result_of_exam_page .result_box .desc {
+        margin: 20px 0 30px;
+    }
+    .name_ques .num {
+        width: 27px;
+        min-width: 27px;
+        height: 27px;
+        font-size: 14px;
+    }
+    .result_of_exam_page .headPage {
+        margin-bottom: 15px;
+        font-size: 25px;
+    }
+    .single_course_join_page #course_section .main_content_wrapper .box_design {
+        padding: 30px;
+    }
+    .logo-f img {
+        width: auto;
+    }
+    .question_box .ques_name_box .video_box iframe {
+        height: auto;
+    }
+    .my_certificates_page .certificates_content .box_content {
+        padding: 50px 10px;
+    }
+    .my_certificates_page .certificates_content .certificate_box .certificate_design.design_two {
+        padding: 10px !important;
+        .inner {
+            .head {
+                padding: 20px !important;
+            }
+            .content_cert .name {
+                font-size: 28px !important;
+            }
+            .footer_cert {
+                margin: 0 15px 15px !important;
+                gap: 0 29px !important;
+            }
+        }
+        .shapes_cert img {
+            height: 100px !important;
+        }
+    }
+    .mobile_list .minicartBox {
+        width: 300px;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# End responsive
+--------------------------------------------------------------*/

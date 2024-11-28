@@ -1,0 +1,638 @@
+/*--------------------------------------------------------------
+# Start single exam page
+--------------------------------------------------------------*/
+
+.single_exam_page {
+    padding: 50px 0 70px;
+    background-color: #F8F8F8;
+    margin-top: 25px;
+    .exam_box {
+        background-color: #FFFFFF;
+        border-radius: 6px;
+        box-shadow: 0px 5px 10px rgba($color: #000000, $alpha: 0.1);
+        .head_box {
+            padding: 36px 20px 25px;
+            text-align: center;
+            gap: 0 6px;
+            color: $mainColor;
+            font-size: 18px;
+            border-bottom: 1px solid #EFEFEF;
+            h6 {
+                font-size: 20px;
+                font-family: "neoMed";
+                margin: 0;
+            }
+        }
+        .content_box {
+            padding: 33px 30px;
+        }
+        .title_cat {
+            color: #484848;
+            font-size: 18px;
+            font-family: "neoMed";
+        }
+        .all_questions {
+            margin: 40px 0 0;
+            background-color: #FAFAFA;
+            border: 1px dashed #D0D0D0;
+            border-radius: 5px;
+        }
+        .must_answer {
+            padding: 10px 0;
+        }
+        .note {
+            font-size: 20px;
+            margin: 0;
+            opacity: 0;
+            visibility: hidden;
+            color: #E41F1F;
+            transition: 0.3s;
+            &.show {
+                opacity: 1;
+                visibility: visible;
+                animation: vibrate 0.3s linear;
+            }
+        }
+        @keyframes vibrate {
+            0% {
+                transform: rotate(0deg);
+            }
+            25% {
+                transform: rotate(7deg);
+            }
+            50% {
+                transform: rotate(0deg);
+            }
+            75% {
+                transform: rotate(-7deg);
+            }
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+        .controls_slider {
+            justify-content: space-between;
+            .main-btn {
+                border: 0;
+                padding: 6px 30px;
+                font-family: "neoMed";
+            }
+            #send-answers {
+                background-color: #25ab4e;
+                &:hover {
+                    background-color: #21793c;
+                }
+            }
+        }
+    }
+    .settings_box {
+        box-shadow: 0px 5px 10px rgba($color: #000000, $alpha: 0.1);
+        background-color: #fff;
+        border-radius: 6px;
+        padding-bottom: 20px;
+        .head_box {
+            padding: 25px 15px;
+            border-bottom: 1px solid #EFEFEF;
+            justify-content: space-between;
+            h4 {
+                font-size: 20px;
+                font-family: "neoMed";
+            }
+        }
+        .timer_exam {
+            padding: 8px 16px;
+            background-color: $secColor;
+            border-radius: 5px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 0 9px;
+        }
+        .block {
+            padding: 17px 20px;
+            &:not(:last-of-type) {
+                border-bottom: 1px solid #EFEFEF;
+            }
+            h6 {
+                color: #484848;
+                font-family: "neoMed";
+                margin-bottom: 20px;
+                span {
+                    color: $mainColor;
+                }
+            }
+            .numbers {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 15px;
+                span {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 5px;
+                    background-color: #EEEEEE;
+                    &.active {
+                        background-color: $mainColor;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    .box_done {
+        text-align: center;
+        width: 70%;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 5px;
+        background-color: #fff;
+        i {
+            font-size: 36px;
+            color: #29b4e3;
+        }
+        p {
+            font-size: 30px;
+            margin: 22px;
+            font-weight: bold;
+        }
+        .main-btn {
+            border: 0;
+            margin-top: 10px;
+            background-color: #4caf50;
+            width: 100%;
+        }
+    }
+}
+
+.question_box {
+    display: none;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    &.active {
+        display: block;
+        -webkit-animation-name: fadeIn;
+        animation-name: fadeIn;
+    }
+    .ques_name_box {
+        padding: 9px 9px 30px;
+        border-bottom: 1px solid #EAEAEA;
+        .image img {
+            max-height: 300px;
+        }
+        .video_box iframe {
+            height: 400px;
+        }
+        .explain_btn {
+            border: 1px solid #29B4E3;
+            background-color: #fff;
+            color: #29b4e3;
+            border-radius: 3px;
+            padding: 4px 10px;
+        }
+    }
+    .ques_explain {
+        border: 1px solid #d5d5d5;
+        padding: 15px 20px;
+        border-radius: 5px;
+        margin: 10px 0;
+        background-color: #fff;
+        box-shadow: 0px 3px 6px rgb(0 0 0 / 7%);
+        display: none;
+    }
+}
+
+.question_answers {
+    padding: 27px 20px 6px;
+    .text_answer {
+        position: relative;
+        .icon {
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 18px;
+            display: flex;
+            &.correct {
+                background-color: #24B400;
+            }
+            &.wrong {
+                background-color: #FF3131;
+            }
+            &.incomplete {
+                background-color: $mainColor;
+            }
+        }
+    }
+    textarea {
+        height: 150px !important;
+        margin-bottom: 20px;
+        box-shadow: none;
+    }
+    .single_answer {
+        input:checked~.item {
+            border-color: $mainColor;
+            color: $mainColor;
+            .checkmark {
+                &:after {
+                    transform: translate(-50%, -50%) scale(1);
+                }
+            }
+        }
+        .item {
+            background-color: #FFFFFF;
+            border: 1px solid #E4E4E4;
+            border-radius: 5px;
+            padding: 12px 5px;
+            padding-inline-start: 16px;
+            color: #484848;
+            gap: 0 7px;
+            margin-bottom: 30px;
+            transition: 0.3s;
+            font-family: "neoRegular";
+            .checkmark {
+                position: relative;
+                display: inline-block;
+                width: 16px;
+                min-width: 16px;
+                height: 16px;
+                border: 1px solid #D0D0D0;
+                background-color: #fff;
+                border-radius: 50%;
+                &:after {
+                    position: absolute;
+                    content: "";
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) scale(0);
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: $mainColor;
+                    transition: 0.3s;
+                }
+            }
+        }
+    }
+    &.connected_section {
+        padding-bottom: 30px;
+        .connect_note {
+            color: #484848;
+        }
+        h5 {
+            font-family: "neoMed";
+        }
+        .item {
+            margin-bottom: 9px;
+        }
+        .connected_questions {
+            .item {
+                border-color: $mainColor;
+                color: $mainColor;
+            }
+        }
+    }
+}
+
+.name_ques {
+    margin-top: 14px;
+    display: flex;
+    gap: 0 10px;
+    padding: 0 10px;
+    .num {
+        width: 32px;
+        min-width: 32px;
+        height: 32px;
+        background-color: #29b4e3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        color: #fff;
+    }
+    .text {
+        font-family: "neoMed";
+        color: #484848;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# End single exam page
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Start details of exam page
+--------------------------------------------------------------*/
+
+.details_of_exam_page {
+    padding: 50px 0 70px;
+    background-color: #F8F8F8;
+    margin-top: 25px;
+    .content_section {
+        width: 70%;
+        margin: 0 auto;
+        background-color: #fff;
+        border-radius: 6px;
+        box-shadow: 0px 5px 10px rgba($color: #000000, $alpha: 0.1);
+        padding: 40px 30px;
+        .head {
+            margin-bottom: 36px;
+            text-align: center;
+            color: #484848;
+            font-size: 24px;
+            font-family: "neoMed";
+        }
+        .result_box {
+            background-color: #FAFAFA;
+            border: 1px dashed #D0D0D0;
+            padding: 46px 20px 34px;
+            border-radius: 5px;
+            .details {
+                .box {
+                    text-align: center;
+                    border-radius: 8px;
+                    color: #fff;
+                    padding: 22px 10px;
+                    height: 100%;
+                    h6 {
+                        margin-bottom: 20px;
+                        font-family: "neoRegular";
+                    }
+                    .num {
+                        font-size: 18px;
+                        font-family: "neoMed";
+                    }
+                    &.one {
+                        background-color: #4FAB79;
+                    }
+                    &.two {
+                        background-color: #7518DD;
+                    }
+                    &.three {
+                        background-color: #ED7565;
+                    }
+                    &.four {
+                        background-color: #3D67E7;
+                    }
+                }
+            }
+            .inside {
+                background-color: #fff;
+                border-radius: 8px;
+                border: 1px solid #E4E4E4;
+                margin: 50px auto 23px;
+                width: 80%;
+                padding: 19px 22px 12px;
+                .head_small {
+                    text-align: center;
+                    margin-bottom: 28px;
+                    font-size: 18px;
+                    font-family: "neoMed";
+                    color: $mainColor;
+                }
+                .block {
+                    margin-bottom: 11px;
+                    &:not(:last-of-type) {
+                        border-bottom: 1px solid #E4E4E4;
+                    }
+                    .title {
+                        margin: 0 0 16px;
+                        text-align: start;
+                        color: $secColor;
+                    }
+                    ul {
+                        list-style-type: disc;
+                        padding-inline-start: 15px;
+                        li {
+                            color: #484848;
+                            margin-bottom: 12px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+            .btn-form {
+                padding: 11px 30px;
+            }
+        }
+    }
+}
+
+
+/*--------------------------------------------------------------
+# End details of exam page
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Start result of exam page
+--------------------------------------------------------------*/
+
+.result_of_exam_page {
+    padding: 0 0 70px;
+    background-color: #F8F8F8;
+    .headPage {
+        text-align: center;
+        color: $mainColor;
+        margin-bottom: 35px;
+        font-size: 32px;
+        font-family: "neoMed";
+    }
+    .content_section {
+        width: 70%;
+        margin: 0 auto;
+        border-radius: 6px;
+        .question_box {
+            background-color: #FAFAFA;
+            border: 1px dashed #D0D0D0;
+            border-radius: 5px;
+        }
+        .item {
+            position: relative;
+            .icon {
+                position: absolute;
+                top: -15px;
+                left: -15px;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                align-items: center;
+                justify-content: center;
+                color: #fff;
+                font-size: 18px;
+                display: none;
+            }
+            &.wrong,
+            &.correct {
+                .icon {
+                    display: flex;
+                }
+            }
+            &.wrong {
+                border-color: #FF3131;
+                color: #FF3131;
+                .checkmark {
+                    &:after {
+                        transform: translate(-50%, -50%) scale(1);
+                        background-color: #FF3131;
+                    }
+                }
+                .icon {
+                    background-color: #FF3131;
+                }
+            }
+            &.correct {
+                border-color: #24B400;
+                color: #24B400;
+                .checkmark {
+                    &:after {
+                        transform: translate(-50%, -50%) scale(1);
+                        background-color: #24B400;
+                    }
+                }
+                .icon {
+                    background-color: #24B400;
+                }
+            }
+        }
+    }
+    .result_box {
+        h5.text {
+            color: #24B400;
+            display: inline-block;
+            border-bottom: 1px solid #24B400;
+            padding: 0 10px 7px;
+            font-size: 20px;
+            font-family: "neoMed";
+        }
+        .desc {
+            margin: 30px 0 40px;
+            font-size: 18px;
+        }
+        .btn-form {
+            padding: 9px 40px;
+        }
+    }
+}
+
+.question_wrapper {
+    margin-bottom: 28px;
+    background-color: #fff;
+    border-radius: 6px;
+    >.name_ques {
+        margin-top: 0;
+        padding: 0;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        box-shadow: 0px 5px 10px rgba($color: #000000, $alpha: 0.10);
+        padding: 30px;
+        border-radius: 6px;
+        i {
+            color: $mainColor;
+            font-size: 20px;
+        }
+    }
+    .answer_block {
+        display: none;
+        padding: 20px 30px 30px;
+    }
+    .question_answers {
+        .single_answer .item {
+            margin-bottom: 10px;
+        }
+        .connected_questions,
+        .connected_answers {
+            .single_answer .item {
+                border-color: $mainColor;
+            }
+        }
+        .connected_answers .wrong .item {
+            border-color: #FF3131 !important;
+        }
+    }
+    .show_ans {
+        font-family: "neoMed";
+        margin-top: 20px;
+        cursor: pointer;
+        display: inline-block;
+        i.rotate {
+            transform: rotate(180deg);
+        }
+    }
+    .result_box {
+        display: none;
+        .question_answers .connected_answers .single_answer .item {
+            border-color: #24B400 !important;
+        }
+    }
+}
+
+.cour-block .img-block.play .img,
+.cour-block .img-block.play .overlay .price,
+.cour-block .img-block.play .overlay .price,
+.cour-block .img-block.play .overlay .rate {
+    opacity: 0;
+}
+
+.cour-block .img-block .overlay .video_box {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    object-fit: cover;
+    object-position: center;
+    margin: 0;
+    opacity: 0;
+    transition: all .5s;
+    z-index: -1;
+}
+
+.cour-block .img-block.play .overlay .video_box {
+    opacity: 1;
+    z-index: 2;
+}
+
+.single_answer {
+    display: flex;
+}
+
+.single_answer .num {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background: #29b4e3;
+    border-radius: 50%;
+    color: #fff;
+    margin-top: 6px;
+}
+
+.single_answer .item.flex-center-h {
+    width: calc(100% - 45px);
+    margin-inline-start: 10px;
+}
+
+.ans-h .single_answer .num {
+    background: #33b933;
+}
+
+
+/*--------------------------------------------------------------
+# End result of exam page
+--------------------------------------------------------------*/

@@ -1,0 +1,190 @@
+/*--------------------------------------------------------------
+# start cart page
+--------------------------------------------------------------*/
+
+.cart_page {
+    .head_page {
+        font-size: 32px;
+        font-family: "neoBold";
+        margin-bottom: 13px;
+    }
+    .my_products {
+        .cart_product {
+            padding: 20px 16px;
+            border: 1px solid #D0D0D0;
+            border-radius: 5px;
+            &:not(:last-of-type) {
+                margin-bottom: 20px;
+            }
+            .copon_box {
+                margin-top: 15px;
+                border-top: 1px solid $mainColor;
+                padding-top: 10px;
+                .text {
+                    color: #6D6D6D;
+                    font-size: 16px;
+                    font-family: "neoRegular";
+                    margin-bottom: 5px;
+                }
+                .input {
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    height: 45px;
+                    border-inline-end: 0;
+                    max-width: 350px;
+                    input {
+                        border: 0;
+                        background-color: transparent;
+                        height: 100%;
+                        flex: 1;
+                        padding: 5px 14px;
+                        justify-content: space-between;
+                        &::placeholder {
+                            color: #A0A0A0;
+                        }
+                    }
+                    .main-btn {
+                        border: 0;
+                        height: calc(100% + 2px);
+                        border-radius: 5px 0 0 5px;
+                    }
+                }
+            }
+            .info_broduct {
+                gap: 0 14px;
+                .image {
+                    width: 120px;
+                    height: 86px;
+                    border-radius: 5px;
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .name a {
+                    font-family: "neoMed";
+                    color: #343434;
+                    margin-bottom: 14px;
+                }
+                .meta {
+                    .item {
+                        &:not(:last-of-type) {
+                            margin-bottom: 7px;
+                        }
+                        gap: 0 6px;
+                        i {
+                            color: $mainColor;
+                        }
+                        .text {
+                            color: #6D6D6D;
+                            font-family: "neoRegular";
+                        }
+                    }
+                }
+                a:hover {
+                    color: $mainColor !important;
+                }
+            }
+            .more_details {
+                text-align: end;
+                .price {
+                    margin-bottom: 20px;
+                    font-size: 18px;
+                    font-family: "neoRegular";
+                }
+                .main-btn {
+                    border-color: #C4C4C4;
+                    color: #6D6D6D;
+                    font-family: "neoRegular";
+                    gap: 0 7px;
+                    i {
+                        font-size: 22px;
+                    }
+                    &:hover {
+                        background-color: $secColor;
+                        color: #fff;
+                        border-color: $secColor;
+                    }
+                }
+            }
+        }
+    }
+    .cart_cardSide {
+        border: 1px solid #D0D0D0;
+        border-radius: 5px;
+        padding: 30px 20px;
+        .head {
+            color: #6D6D6D;
+            font-size: 18px;
+            font-family: "neoRegular";
+            gap: 0 15px;
+            .num {
+                color: $secColor;
+                font-size: 22px;
+                font-family: "neoMed";
+            }
+        }
+    }
+    .main-btn.remove_all {
+        width: 400px;
+        max-width: 100%;
+        background: #333;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# End cart page
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Start custom modal
+--------------------------------------------------------------*/
+
+.custom_modal {
+    .modal-content {
+        padding: 25px;
+        background-color: #1f2129;
+        border: 0;
+        border-radius: 14px;
+        text-align: center;
+        .modal-body {
+            padding: 0;
+            p {
+                color: #fff;
+                font-size: 25px;
+                font-weight: 500;
+            }
+        }
+        .modal-footer {
+            margin-top: 15px;
+            padding: 0;
+            border: 0;
+            justify-content: center;
+            .main-btn {
+                padding: 8px 30px;
+                border: 0;
+                min-width: 87px;
+                &.close {
+                    background-color: #FF6666;
+                    &:hover {
+                        background-color: #b40303;
+                    }
+                }
+                &.main {
+                    &:hover {
+                        background-color: #1e3385;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*--------------------------------------------------------------
+# End custom modal
+--------------------------------------------------------------*/

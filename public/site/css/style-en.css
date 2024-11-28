@@ -1,0 +1,157 @@
+html,
+body {
+    direction: ltr;
+}
+
+form {
+    direction: ltr;
+}
+
+.nice-select:after {
+    left: auto;
+    right: 15px;
+}
+
+.search-h form .form-group i {
+    right: auto;
+    left: 12px;
+}
+
+.social-fixed {
+    left: auto;
+    right: 0;
+}
+
+.courses-slider .item,
+.news-slider .item {
+    direction: ltr;
+}
+
+.text-teacher ul li::before {
+    right: auto;
+    left: 0;
+}
+
+.news-block .details .more i {
+    transform: scaleX(-1);
+}
+
+.say-block {
+    direction: ltr;
+}
+
+.img-app .img.img1 {
+    left: auto;
+    right: -16px;
+}
+
+.animations .right {
+    right: auto;
+    left: 0;
+}
+
+.say-h .animations .right {
+    left: auto;
+    right: 0;
+}
+
+.img-teacher::before {
+    left: auto;
+    right: 0;
+}
+
+.img-teacher::after {
+    right: auto;
+    left: 0;
+}
+
+.courses-h::before {
+    left: auto;
+    right: 0;
+}
+
+.header-in .nav-inner .menu-left ul li::after {
+    left: auto;
+    right: -2px;
+}
+
+.contest_page .contest_box .rules ul li:before {
+    left: -20px;
+    right: auto;
+}
+
+.myProfile_page .mou_tab .noti {
+    right: 20px;
+    left: auto;
+}
+
+.result_of_exam_page .content_section .item .icon {
+    right: -15px;
+    left: auto;
+}
+
+.mobile_list {
+    right: auto;
+    left: 0;
+    transform: translateX(-100%);
+}
+
+.my_certificates_page .certificates_content .certificate_box .certificate_design.design_two .shapes_cert img {
+    height: 200px !important;
+}
+
+.minicartBox {
+    left: auto;
+    right: 0;
+}
+
+.minicartBox:before {
+    left: auto;
+    right: 5px;
+}
+
+.minicartBox h5 span {
+    left: auto;
+    right: 10px;
+}
+
+.minicartBox .product-image {
+    padding-left: 15px !important;
+    padding-right: 0 !important;
+}
+
+.minicartBox .cart-details span.remove {
+    right: 15px;
+    left: auto;
+}
+
+.mobile_list .minicartBox {
+    right: auto;
+    left: 0;
+}
+
+.mobile_list .minicartBox:before {
+    right: auto;
+    left: 5px;
+}
+
+.pass-group .toggle-password {
+    left: auto;
+    right: 15px;
+}
+
+.search-h form .form-group .btn-drop::after {
+    left: auto;
+    right: 15px;
+}
+
+.second_nav .center_div .main_list>li .dropdown_menu li a i {
+    left: auto;
+    right: 0;
+    transform: rotate(270deg);
+}
+
+.second_nav .center_div .main_list>li .dropdown_menu li  .dropdown_menu {
+    left: 100%;
+    right: auto;
+}

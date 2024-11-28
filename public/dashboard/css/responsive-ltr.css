@@ -1,0 +1,53 @@
+
+@media only screen and (max-width: 6000px) and (min-width: 700px) {
+  .wrapper.right-bar-enabled .right-bar {
+    left: 0;
+    right: auto;
+  }
+}
+@media (max-width: 767px) {
+  
+  .enlarged .left.side-menu {
+    margin-left: auto;
+    margin-right: -75px;
+  }
+  .content-page {
+    margin-right: 0px !important;
+    margin-left: auto !important ;
+  }
+  .footer {
+    right: 0px !important;
+    left: auto !important;
+  }
+  .mobile-sidebar {
+    right: 0px;
+    left: auto;
+  }
+  .mobile-content {
+    left: -250px;
+    right: 250px;
+  }
+  .navbar-nav .open .dropdown-menu {
+    right: auto;
+    left: 0;
+  }
+  .todo-send {
+    padding:  0px;
+    padding-right: 15px;
+  }
+  .chat-inputbar {
+    padding: 0px;
+    padding-right: 15px;
+  }
+  .chat-send {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+/* Container-alt */
+@media (max-width: 419px) {
+  .content-page {
+    margin-right: 70px;
+    margin-left: auto;
+  }
+}

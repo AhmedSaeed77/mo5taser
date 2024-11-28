@@ -1,0 +1,111 @@
+/*--------------------------------------------------------------
+# Start news page
+--------------------------------------------------------------*/
+
+.news_page {
+    padding: 60px 0;
+    .headPage {
+        color: #484848;
+        font-size: 26px;
+        font-family: "neoMed";
+    }
+    .news-block {
+        box-shadow: 0px 5px 8px rgba($color: #000000, $alpha: 0.07);
+        &:hover {
+            box-shadow: 0px 5px 16px rgba($color: #29B4E3, $alpha: 0.19);
+        }
+    }
+}
+
+.single_news_page {
+    padding: 40px 0 70px;
+    .new_content {
+        .image {
+            margin-bottom: 20px;
+            img {
+                width: 100%;
+                height: 350px;
+                object-fit: cover;
+                border-radius: 5px;
+            }
+        }
+        .date {
+            margin-bottom: 11px;
+            i {
+                color: $mainColor;
+                font-size: 20px;
+            }
+            .text {
+                font-size: 18px;
+                font-family: "neoRegular";
+                color: #6D6D6D;
+                line-height: 1;
+            }
+        }
+        .name {
+            color: #484848;
+            font-size: 18px;
+            font-family: "neoMed";
+            margin-bottom: 33px;
+        }
+        .desc {
+            color: #484848;
+        }
+    }
+    .other_news {
+        background-color: #F7F7F7;
+        border-radius: 5px;
+        padding: 19px 16px;
+        .head {
+            font-size: 18px;
+            margin-bottom: 27px;
+            font-family: "neoMed";
+        }
+        .item {
+            display: flex;
+            align-items: center;
+            gap: 0 10px;
+            font-family: "neoLight";
+            &:not(:last-of-type) {
+                padding-bottom: 20px;
+                margin-bottom: 20px;
+                border-bottom: 1px solid #D0D0D0;
+            }
+            &:hover {
+                .name {
+                    color: $mainColor;
+                }
+                .image img {
+                    transform: scale(1.1);
+                }
+            }
+            .image {
+                width: 88px;
+                min-width: 88px;
+                border-radius: 5px;
+                overflow: hidden;
+                border: 1px solid #D0D0D0;
+                img {
+                    width: 100%;
+                    transition: 0.3s;
+                }
+            }
+            .name {
+                transition: 0.3s;
+            }
+            .date {
+                margin-top: 8px;
+                gap: 0 5px;
+                color: $pColor;
+                i {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+
+/*--------------------------------------------------------------
+# End news page
+--------------------------------------------------------------*/
